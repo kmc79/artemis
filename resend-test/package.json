@@ -1,0 +1,13 @@
+{
+  "name": "resend-test",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:resend": "node test-resend-email.mjs",
+    "daily:arsenal": "node daily-arsenal-summary.mjs",
+    "send:arsenal-summary": "node send-arsenal-summary-email.mjs"
+  },
+  "dependencies": {
+    "resend": "^4.0.0"
+  }
+}

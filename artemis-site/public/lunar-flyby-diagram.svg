@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Artemis II mission profile diagram</title>
+  <desc id="desc">A diagram showing Artemis II in Earth orbit, translunar injection from Earth orbit toward the Moon, the lunar flyby, and the free-return path back to Earth.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <radialGradient id="earthOcean" cx="35%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="55%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </radialGradient>
+    <radialGradient id="moonBody" cx="35%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrowPurple" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#a78bfa"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="800" rx="36" fill="url(#bg)"/>
+
+  <g opacity="0.3">
+    <circle cx="120" cy="110" r="2" fill="#fff"/>
+    <circle cx="260" cy="90" r="1.5" fill="#fff"/>
+    <circle cx="390" cy="140" r="2" fill="#fff"/>
+    <circle cx="570" cy="88" r="1.5" fill="#fff"/>
+    <circle cx="760" cy="130" r="2" fill="#fff"/>
+    <circle cx="1030" cy="90" r="1.5" fill="#fff"/>
+    <circle cx="1120" cy="170" r="2" fill="#fff"/>
+    <circle cx="190" cy="670" r="2" fill="#fff"/>
+    <circle cx="340" cy="720" r="1.5" fill="#fff"/>
+    <circle cx="520" cy="660" r="2" fill="#fff"/>
+    <circle cx="720" cy="710" r="1.5" fill="#fff"/>
+    <circle cx="960" cy="680" r="2" fill="#fff"/>
+  </g>
+
+  <text x="86" y="92" fill="#f8fafc" font-family="Arial, sans-serif" font-size="42" letter-spacing="5">ARTEMIS II MISSION PROFILE</text>
+  <text x="88" y="132" fill="#94a3b8" font-family="Arial, sans-serif" font-size="22">Earth orbit, translunar injection, lunar flyby, and free-return to Earth</text>
+
+  <g filter="url(#glow)">
+    <circle cx="220" cy="520" r="96" fill="url(#earthOcean)"/>
+    <circle cx="930" cy="300" r="46" fill="url(#moonBody)"/>
+  </g>
+
+  <path d="M160 500c28-18 54-36 82-20 25 14 44 7 62-9 8 17 9 32 8 50-16 11-35 19-60 10-28-10-51-4-78 7-10-10-14-24-14-38z" fill="#34d399" opacity="0.85"/>
+  <path d="M205 448c10-7 24-12 36-8 6 15 16 24 34 30-12 10-27 15-42 12-15-2-24-14-28-34z" fill="#86efac" opacity="0.75"/>
+
+  <circle cx="220" cy="520" r="132" fill="none" stroke="#475569" stroke-width="2.5" stroke-dasharray="8 10" opacity="0.7"/>
+  <path d="M112 510a108 108 0 1 1 78 112" fill="none" stroke="#f59e0b" stroke-width="5" stroke-linecap="round" marker-end="url(#arrowBlue)" filter="url(#glow)"/>
+
+  <path d="M312 430 C 430 280, 705 205, 905 272" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" marker-end="url(#arrowBlue)" filter="url(#glow)"/>
+  <path d="M930 318 C 880 455, 620 620, 270 560" fill="none" stroke="#a78bfa" stroke-width="6" stroke-linecap="round" stroke-dasharray="14 14" marker-end="url(#arrowPurple)" filter="url(#glow)"/>
+
+  <g transform="translate(286 468)">
+    <rect x="-13" y="-8" width="26" height="16" rx="6" fill="#f8fafc"/>
+    <path d="M13 0 l20 -8 l0 16 z" fill="#f8fafc"/>
+    <path d="M-15 -5 l-16 -11" stroke="#f8fafc" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <g fill="#e2e8f0" font-family="Arial, sans-serif">
+    <text x="220" y="645" text-anchor="middle" font-size="34" letter-spacing="4">EARTH</text>
+    <text x="930" y="368" text-anchor="middle" font-size="28" letter-spacing="4">MOON</text>
+  </g>
+
+  <g font-family="Arial, sans-serif">
+    <g>
+      <circle cx="122" cy="410" r="7" fill="#f59e0b"/>
+      <rect x="142" y="386" width="172" height="38" rx="10" fill="#451a03" opacity="0.95"/>
+      <text x="158" y="411" fill="#fdba74" font-size="19" letter-spacing="2">EARTH ORBIT PHASE</text>
+    </g>
+
+    <g>
+      <circle cx="420" cy="286" r="7" fill="#38bdf8"/>
+      <rect x="440" y="262" width="226" height="38" rx="10" fill="#082f49" opacity="0.95"/>
+      <text x="456" y="287" fill="#bae6fd" font-size="19" letter-spacing="2">TRANSLUNAR INJECTION</text>
+    </g>
+
+    <g>
+      <circle cx="874" cy="264" r="7" fill="#e2e8f0"/>
+      <rect x="894" y="240" width="150" height="38" rx="10" fill="#1e293b" opacity="0.95"/>
+      <text x="910" y="265" fill="#e2e8f0" font-size="20" letter-spacing="2">LUNAR FLYBY</text>
+    </g>
+
+    <g>
+      <circle cx="520" cy="625" r="7" fill="#a78bfa"/>
+      <rect x="540" y="601" width="242" height="38" rx="10" fill="#312e81" opacity="0.95"/>
+      <text x="556" y="626" fill="#ddd6fe" font-size="19" letter-spacing="2">FREE-RETURN TO EARTH</text>
+    </g>
+  </g>
+</svg>

@@ -11,26 +11,42 @@ export default function TechnologyComparisonPage() {
       />
 
       <Section title="Why the technology comparison matters">
-        <p>
-          Looking at Apollo and Artemis side by side helps clarify what Artemis II is actually testing. Apollo proved that human beings could reach the Moon with the tools available in the 1960s, which remains one of the most impressive engineering achievements in modern history. Artemis II operates from a very different baseline. Computing is radically more capable, software development is more mature, mission planning is more deeply modeled, and spacecraft interfaces are designed around a different understanding of human-machine interaction.
-        </p>
-        <p>
-          Yet the comparison is useful only if it avoids the lazy conclusion that newer automatically means more meaningful. Apollo’s systems were constrained, but they were also elegant, disciplined, and astonishingly effective within their limits. Artemis benefits from modern tools, but it also carries the weight of higher expectations, broader partnership structures, and a program architecture intended to support repeated missions rather than a single sprint to victory. The question is not which era built the more impressive gadget. It is how each era designed technology around the kind of lunar program it was trying to achieve.
-        </p>
+        <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+          <div className="space-y-6">
+            <p>
+              Looking at Apollo and Artemis side by side helps clarify what Artemis II is actually testing. Apollo proved that human beings could reach the Moon with the tools available in the 1960s, which remains one of the most impressive engineering achievements in modern history. Artemis II operates from a very different baseline. Computing is radically more capable, software development is more mature, mission planning is more deeply modeled, and spacecraft interfaces are designed around a different understanding of human-machine interaction.
+            </p>
+            <p>
+              Yet the comparison is useful only if it avoids the lazy conclusion that newer automatically means more meaningful. Apollo’s systems were constrained, but they were also elegant, disciplined, and astonishingly effective within their limits. Artemis benefits from modern tools, but it also carries the weight of higher expectations, broader partnership structures, and a program architecture intended to support repeated missions rather than a single sprint to victory. The question is not which era built the more impressive gadget. It is how each era designed technology around the kind of lunar program it was trying to achieve.
+            </p>
+          </div>
+          <figure className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-[0_0_50px_rgba(56,189,248,0.08)] backdrop-blur-sm lg:mt-2">
+            <div className="border-b border-white/10 px-6 py-4">
+              <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-300">Comparison map</p>
+            </div>
+            <img
+              src="/technology-comparison-diagram.svg"
+              alt="Visual comparison between Apollo and Artemis across computing, spacecraft design, mission operations, and program structure"
+              className="w-full"
+            />
+          </figure>
+        </div>
       </Section>
 
       <Section title="Apollo and Artemis side by side">
         <div className="space-y-6">
           {technologyComparison.map((item) => (
-            <article key={item.category} className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+            <article key={item.category} className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[0_0_50px_rgba(56,189,248,0.06)] backdrop-blur-sm">
               <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-300">{item.category}</p>
               <div className="mt-5 grid gap-6 lg:grid-cols-2">
                 <div className="rounded-2xl border border-white/10 bg-slate-950/45 p-5">
                   <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">Apollo era</p>
+                  <div className="mt-4 h-1.5 w-20 rounded-full bg-slate-500/60" aria-hidden="true" />
                   <p className="mt-4 text-base leading-8 text-slate-300">{item.apollo}</p>
                 </div>
-                <div className="rounded-2xl border border-sky-400/20 bg-sky-400/10 p-5">
+                <div className="rounded-2xl border border-sky-400/20 bg-sky-400/10 p-5 shadow-[0_0_30px_rgba(56,189,248,0.08)]">
                   <p className="text-xs font-semibold uppercase tracking-[0.3em] text-sky-200">Artemis era</p>
+                  <div className="mt-4 h-1.5 w-20 rounded-full bg-sky-300/80" aria-hidden="true" />
                   <p className="mt-4 text-base leading-8 text-slate-100">{item.artemis}</p>
                 </div>
               </div>
@@ -43,6 +59,24 @@ export default function TechnologyComparisonPage() {
         <p>
           The most obvious difference between Apollo and Artemis is computing power. Apollo crews flew with systems so limited by modern standards that every byte of memory and every line of code had to justify itself. That scarcity created a style of engineering that prized efficiency, procedural clarity, and intense discipline between software, hardware, and crew operations. Apollo’s success was not evidence that limited computing was ideal; it was evidence that extraordinary rigor can compensate for severe constraints.
         </p>
+        <figure className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-[0_0_50px_rgba(56,189,248,0.08)] backdrop-blur-sm">
+          <img
+            src="/apollo-guidance-computer-dsky.jpg"
+            alt="Apollo Guidance Computer with DSKY display and keyboard"
+            className="aspect-[16/10] w-full object-cover"
+          />
+          <figcaption className="border-t border-white/10 bg-slate-950/80 px-5 py-4 text-sm leading-6 text-slate-300">
+            Apollo’s computing story was inseparable from the Guidance Computer and its DSKY interface — a reminder of how much the era accomplished with extremely constrained hardware. Source: 
+            <a
+              href="https://commons.wikimedia.org/wiki/File:ApolloGuidanceComputerwithDSKY.agr.jpg"
+              target="_blank"
+              rel="noreferrer"
+              className="text-sky-300 transition hover:text-sky-200"
+            >
+              Wikimedia Commons
+            </a>
+          </figcaption>
+        </figure>
         <p>
           Artemis II benefits from a completely different landscape. Orion’s computers, displays, and software environment allow richer information handling, better fault management, and more flexible system integration. But the deeper shift is not just computational abundance. It is that modern missions are expected to model, test, and monitor risk in far more layered ways. Digital tools enable more simulation, more diagnostic data, and more opportunities to refine operations before and during flight. Artemis does not escape uncertainty, but it confronts that uncertainty with a different toolkit and a different institutional attitude toward safety.
         </p>
@@ -52,6 +86,24 @@ export default function TechnologyComparisonPage() {
         <p>
           One of the most human differences between the two eras lies in the cockpit. Apollo crews worked through dense arrays of switches, lights, and controls that demanded memorization and highly trained interpretation. Those interfaces suited the hardware and mission logic of their time, but they also placed heavy cognitive demands on astronauts during already intense phases of flight.
         </p>
+        <figure className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-[0_0_50px_rgba(56,189,248,0.08)] backdrop-blur-sm">
+          <img
+            src="/orion-crew-module-interior.jpeg"
+            alt="Interior of Orion crew module showing the modern crew environment and display layout"
+            className="aspect-[16/10] w-full object-cover"
+          />
+          <figcaption className="border-t border-white/10 bg-slate-950/80 px-5 py-4 text-sm leading-6 text-slate-300">
+            Orion’s crew environment reflects a different interface philosophy from Apollo: more display-driven, more legible, and built around modern situational awareness. Source: 
+            <a
+              href="https://commons.wikimedia.org/wiki/File:Inside_Orion%27s_Crew_Module_(art001e000092_FD1_interior1).jpeg"
+              target="_blank"
+              rel="noreferrer"
+              className="text-sky-300 transition hover:text-sky-200"
+            >
+              Wikimedia Commons
+            </a>
+          </figcaption>
+        </figure>
         <p>
           Orion’s glass cockpit represents a different philosophy. Information can be organized more dynamically, displays can present system state with greater clarity, and the crew’s interaction with the spacecraft is built around modern expectations of situational awareness. That does not make Artemis II simple. Lunar flight remains unforgiving. But it means the crew is supported by interface design that reflects decades of learning about how humans absorb information, prioritize decisions, and manage workload under pressure.
         </p>

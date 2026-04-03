@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Artemis II mission phases diagram</title>
+  <desc id="desc">A visual breakdown of the main phases of the Artemis II mission from launch through splashdown.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="900" rx="36" fill="url(#bg)"/>
+
+  <text x="78" y="90" fill="#f8fafc" font-family="Arial, sans-serif" font-size="42" letter-spacing="5">ARTEMIS II MISSION PHASES</text>
+  <text x="80" y="130" fill="#94a3b8" font-family="Arial, sans-serif" font-size="22">From launch to lunar flyby to splashdown</text>
+
+  <line x1="130" y1="450" x2="1070" y2="450" stroke="url(#line)" stroke-width="8" stroke-linecap="round" filter="url(#glow)"/>
+
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(160 450)">
+      <circle r="20" fill="#38bdf8" filter="url(#glow)"/>
+      <circle r="52" fill="none" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="2"/>
+      <text x="0" y="-85" text-anchor="middle" fill="#bae6fd" font-size="20" letter-spacing="2">DAY 1</text>
+      <text x="0" y="95" text-anchor="middle" fill="#f8fafc" font-size="24" letter-spacing="2">LAUNCH</text>
+      <text x="0" y="125" text-anchor="middle" fill="#94a3b8" font-size="17">SLS lifts Orion</text>
+      <text x="0" y="148" text-anchor="middle" fill="#94a3b8" font-size="17">into Earth orbit</text>
+    </g>
+
+    <g transform="translate(340 450)">
+      <circle r="20" fill="#38bdf8" filter="url(#glow)"/>
+      <circle r="52" fill="none" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="2"/>
+      <text x="0" y="-85" text-anchor="middle" fill="#bae6fd" font-size="20" letter-spacing="2">DAY 1</text>
+      <text x="0" y="95" text-anchor="middle" fill="#f8fafc" font-size="24" letter-spacing="2">EARTH ORBIT</text>
+      <text x="0" y="125" text-anchor="middle" fill="#94a3b8" font-size="17">Initial checks and</text>
+      <text x="0" y="148" text-anchor="middle" fill="#94a3b8" font-size="17">proximity operations</text>
+    </g>
+
+    <g transform="translate(540 450)">
+      <circle r="20" fill="#60a5fa" filter="url(#glow)"/>
+      <circle r="52" fill="none" stroke="#60a5fa" stroke-opacity="0.25" stroke-width="2"/>
+      <text x="0" y="-85" text-anchor="middle" fill="#bae6fd" font-size="20" letter-spacing="2">DAY 2</text>
+      <text x="0" y="95" text-anchor="middle" fill="#f8fafc" font-size="24" letter-spacing="2">DEPARTURE BURN</text>
+      <text x="0" y="125" text-anchor="middle" fill="#94a3b8" font-size="17">Translunar injection</text>
+      <text x="0" y="148" text-anchor="middle" fill="#94a3b8" font-size="17">toward the Moon</text>
+    </g>
+
+    <g transform="translate(730 450)">
+      <circle r="20" fill="#818cf8" filter="url(#glow)"/>
+      <circle r="52" fill="none" stroke="#818cf8" stroke-opacity="0.25" stroke-width="2"/>
+      <text x="0" y="-85" text-anchor="middle" fill="#c4b5fd" font-size="20" letter-spacing="2">DAYS 2–5</text>
+      <text x="0" y="95" text-anchor="middle" fill="#f8fafc" font-size="24" letter-spacing="2">OUTBOUND COAST</text>
+      <text x="0" y="125" text-anchor="middle" fill="#94a3b8" font-size="17">Crewed operations</text>
+      <text x="0" y="148" text-anchor="middle" fill="#94a3b8" font-size="17">in cislunar space</text>
+    </g>
+
+    <g transform="translate(910 450)">
+      <circle r="20" fill="#a78bfa" filter="url(#glow)"/>
+      <circle r="52" fill="none" stroke="#a78bfa" stroke-opacity="0.25" stroke-width="2"/>
+      <text x="0" y="-85" text-anchor="middle" fill="#ddd6fe" font-size="20" letter-spacing="2">AROUND DAY 5</text>
+      <text x="0" y="95" text-anchor="middle" fill="#f8fafc" font-size="24" letter-spacing="2">LUNAR FLYBY</text>
+      <text x="0" y="125" text-anchor="middle" fill="#94a3b8" font-size="17">Far-side pass and</text>
+      <text x="0" y="148" text-anchor="middle" fill="#94a3b8" font-size="17">free-return turn home</text>
+    </g>
+
+    <g transform="translate(1060 450)">
+      <circle r="20" fill="#c084fc" filter="url(#glow)"/>
+      <circle r="52" fill="none" stroke="#c084fc" stroke-opacity="0.25" stroke-width="2"/>
+      <text x="0" y="-85" text-anchor="middle" fill="#e9d5ff" font-size="20" letter-spacing="2">DAYS 6–10</text>
+      <text x="0" y="95" text-anchor="middle" fill="#f8fafc" font-size="24" letter-spacing="2">RETURN &amp; SPLASHDOWN</text>
+      <text x="0" y="125" text-anchor="middle" fill="#94a3b8" font-size="17">Reentry, parachutes,</text>
+      <text x="0" y="148" text-anchor="middle" fill="#94a3b8" font-size="17">Pacific recovery</text>
+    </g>
+  </g>
+
+  <g fill="#94a3b8" font-family="Arial, sans-serif" font-size="18">
+    <text x="140" y="730">Artemis II is structured as a proving mission: launch, Earth-orbit validation, translunar departure,</text>
+    <text x="140" y="758">deep-space operations, lunar flyby, and safe return. The mission matters because the full chain has</text>
+    <text x="140" y="786">to work with a real crew on board before any later landing attempt becomes operationally credible.</text>
+  </g>
+</svg>

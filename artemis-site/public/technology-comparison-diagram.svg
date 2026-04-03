@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Apollo versus Artemis comparison diagram</title>
+  <desc id="desc">A visual comparison between Apollo and Artemis across computing, spacecraft, crew interfaces, mission operations, and program structure.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="apollo" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <linearGradient id="artemis" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="760" rx="36" fill="url(#bg)"/>
+  <text x="76" y="88" fill="#f8fafc" font-family="Arial, sans-serif" font-size="40" letter-spacing="5">APOLLO VS ARTEMIS</text>
+  <text x="78" y="126" fill="#94a3b8" font-family="Arial, sans-serif" font-size="22">Same destination family, very different technological and program logic</text>
+
+  <g font-family="Arial, sans-serif">
+    <text x="260" y="178" text-anchor="middle" fill="#cbd5e1" font-size="24" letter-spacing="4">APOLLO ERA</text>
+    <text x="940" y="178" text-anchor="middle" fill="#bae6fd" font-size="24" letter-spacing="4">ARTEMIS ERA</text>
+
+    <g>
+      <text x="600" y="250" text-anchor="middle" fill="#f8fafc" font-size="24" letter-spacing="3">GUIDANCE &amp; COMPUTING</text>
+      <rect x="90" y="275" width="340" height="52" rx="18" fill="url(#apollo)" opacity="0.88"/>
+      <rect x="770" y="275" width="340" height="52" rx="18" fill="url(#artemis)" opacity="0.95"/>
+      <text x="260" y="309" text-anchor="middle" fill="#f8fafc" font-size="20">Scarce computing, hard efficiency limits</text>
+      <text x="940" y="309" text-anchor="middle" fill="#f8fafc" font-size="20">Abundant computing, richer software environment</text>
+    </g>
+
+    <g>
+      <text x="600" y="382" text-anchor="middle" fill="#f8fafc" font-size="24" letter-spacing="3">SPACECRAFT &amp; CREW INTERFACES</text>
+      <rect x="90" y="407" width="340" height="52" rx="18" fill="url(#apollo)" opacity="0.88"/>
+      <rect x="770" y="407" width="340" height="52" rx="18" fill="url(#artemis)" opacity="0.95"/>
+      <text x="260" y="441" text-anchor="middle" fill="#f8fafc" font-size="20">Analog-heavy panels, intense procedural load</text>
+      <text x="940" y="441" text-anchor="middle" fill="#f8fafc" font-size="20">Glass cockpit, modern displays, clearer awareness</text>
+    </g>
+
+    <g>
+      <text x="600" y="514" text-anchor="middle" fill="#f8fafc" font-size="24" letter-spacing="3">MISSION OPERATIONS</text>
+      <rect x="90" y="539" width="340" height="52" rx="18" fill="url(#apollo)" opacity="0.88"/>
+      <rect x="770" y="539" width="340" height="52" rx="18" fill="url(#artemis)" opacity="0.95"/>
+      <text x="260" y="573" text-anchor="middle" fill="#f8fafc" font-size="20">Brilliant but less networked operational tooling</text>
+      <text x="940" y="573" text-anchor="middle" fill="#f8fafc" font-size="20">Model-rich, data-rich, globally integrated systems</text>
+    </g>
+
+    <g>
+      <text x="600" y="646" text-anchor="middle" fill="#f8fafc" font-size="24" letter-spacing="3">PROGRAM STRUCTURE</text>
+      <rect x="90" y="671" width="340" height="52" rx="18" fill="url(#apollo)" opacity="0.88"/>
+      <rect x="770" y="671" width="340" height="52" rx="18" fill="url(#artemis)" opacity="0.95"/>
+      <text x="260" y="705" text-anchor="middle" fill="#f8fafc" font-size="20">Compressed national race program</text>
+      <text x="940" y="705" text-anchor="middle" fill="#f8fafc" font-size="20">Distributed multinational campaign</text>
+    </g>
+
+    <line x1="600" y1="208" x2="600" y2="716" stroke="#334155" stroke-width="2" stroke-dasharray="8 10"/>
+  </g>
+</svg>

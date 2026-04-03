@@ -5,11 +5,37 @@ import { homeHighlights, missionStats, siteNavigation } from "@/content/site";
 export default function HomePage() {
   return (
     <>
-      <PageHero
-        eyebrow="Artemis II"
-        title="A return to crewed lunar flight, and the beginning of a new era beyond Earth orbit"
-        intro="Artemis II stands at a rare hinge-point in spaceflight history. It is not only NASA’s first crewed Artemis mission, but also the first time since the Apollo era that astronauts will leave the near-Earth environment and head out on a lunar trajectory. As a mission, it is both a test and a statement: a demonstration that the systems built for a new generation of deep-space exploration are ready to carry human beings around the Moon and safely home again."
-      />
+      <section className="mx-auto grid max-w-7xl gap-12 px-6 pb-14 pt-20 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 lg:pt-28 xl:gap-20">
+        <div>
+          <PageHero
+            eyebrow="Artemis II"
+            title="A return to crewed lunar flight, and the beginning of a new era beyond Earth orbit"
+            intro="Artemis II stands at a rare hinge-point in spaceflight history. It is not only NASA’s first crewed Artemis mission, but also the first time since the Apollo era that astronauts will leave the near-Earth environment and head out on a lunar trajectory. As a mission, it is both a test and a statement: a demonstration that the systems built for a new generation of deep-space exploration are ready to carry human beings around the Moon and safely home again."
+          />
+        </div>
+        <aside className="relative self-center lg:pt-10">
+          <div className="absolute -inset-5 rounded-[2rem] bg-sky-400/10 blur-3xl" aria-hidden="true" />
+          <div className="absolute -right-6 -top-6 h-28 w-28 rounded-full border border-sky-300/20 bg-sky-300/10 blur-2xl" aria-hidden="true" />
+          <figure className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-[0_0_80px_rgba(56,189,248,0.15)] backdrop-blur-sm">
+            <img
+              src="/artemis-2-crew-portrait.jpg"
+              alt="Official Artemis II crew portrait featuring Christina Koch, Victor Glover, Reid Wiseman, and Jeremy Hansen"
+              className="h-full w-full object-cover"
+            />
+            <figcaption className="border-t border-white/10 bg-slate-950/80 px-5 py-4 text-sm leading-6 text-slate-300">
+              Official Artemis II crew portrait. Source: 
+              <a
+                href="https://commons.wikimedia.org/wiki/File:Artemis_2_Crew_Portrait.jpg"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sky-300 transition hover:text-sky-200"
+              >
+                Wikimedia Commons
+              </a>
+            </figcaption>
+          </figure>
+        </aside>
+      </section>
 
       <Section title="Why Artemis II matters">
         <p>
@@ -34,18 +60,30 @@ export default function HomePage() {
               That sequence may sound straightforward in summary, but its importance lies in what it tests. Artemis II is meant to prove that Orion can support a crew in deep space, that navigation and communications can be managed across cislunar distances, that manual spacecraft operations can be performed when required, and that reentry and recovery can be executed with the confidence demanded of a crewed system. In practical terms, the mission is NASA’s opportunity to learn with astronauts on board before any attempt is made to land people on the Moon again.
             </p>
           </div>
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-300">Explore the site</p>
-            <div className="mt-5 space-y-4">
-              {siteNavigation.filter((item) => item.href !== "/").map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="block rounded-2xl border border-white/10 px-4 py-4 text-base text-slate-200 transition hover:border-sky-400/40 hover:bg-sky-400/10 hover:text-white"
-                >
-                  {item.label}
-                </Link>
-              ))}
+          <div className="space-y-6">
+            <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-[0_0_50px_rgba(56,189,248,0.08)] backdrop-blur-sm">
+              <div className="border-b border-white/10 px-6 py-4">
+                <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-300">Flight path</p>
+              </div>
+              <img
+                src="/lunar-flyby-diagram.svg"
+                alt="Diagram showing Artemis II traveling from Earth to the Moon and back on a free-return trajectory"
+                className="w-full"
+              />
+            </div>
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[0_0_40px_rgba(167,139,250,0.08)] backdrop-blur-sm">
+              <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-300">Explore the site</p>
+              <div className="mt-5 space-y-4">
+                {siteNavigation.filter((item) => item.href !== "/").map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="block rounded-2xl border border-white/10 px-4 py-4 text-base text-slate-200 transition hover:border-sky-400/40 hover:bg-sky-400/10 hover:text-white"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -57,12 +95,34 @@ export default function HomePage() {
             <GlassCard key={item.title} title={item.title} body={item.body} />
           ))}
         </CardGrid>
-        <p>
-          Artemis II will inevitably be read against Apollo, especially Apollo 8, the 1968 mission that first carried human beings away from Earth and into the Moon’s neighborhood. That comparison is necessary and useful, but it should not flatten the differences between the two eras. Apollo emerged from the intense geopolitical competition of the Cold War and raced toward a near-term demonstration of national power. Artemis is being built in a different context: slower, more international, more systems-oriented, and more explicitly intended as the start of an enduring campaign rather than a single sprint to a flag-and-footprints moment.
-        </p>
-        <p>
-          That distinction matters because Artemis II is not simply reenactment. It is the beginning of a different architecture for exploration, one that links launch systems, spacecraft, lunar operations, partner agencies, and future surface missions into a broader program. The site that follows is built around that idea. It is meant to give each piece of the story room to breathe: the astronauts themselves, the mission profile, the Apollo legacy that still shapes public understanding, the technology that has changed since the 1960s, and the next steps that Artemis II is intended to unlock.
-        </p>
+        <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+          <div className="space-y-6">
+            <p>
+              Artemis II will inevitably be read against Apollo, especially Apollo 8, the 1968 mission that first carried human beings away from Earth and into the Moon’s neighborhood. That comparison is necessary and useful, but it should not flatten the differences between the two eras. Apollo emerged from the intense geopolitical competition of the Cold War and raced toward a near-term demonstration of national power. Artemis is being built in a different context: slower, more international, more systems-oriented, and more explicitly intended as the start of an enduring campaign rather than a single sprint to a flag-and-footprints moment.
+            </p>
+            <p>
+              That distinction matters because Artemis II is not simply reenactment. It is the beginning of a different architecture for exploration, one that links launch systems, spacecraft, lunar operations, partner agencies, and future surface missions into a broader program. The site that follows is built around that idea. It is meant to give each piece of the story room to breathe: the astronauts themselves, the mission profile, the Apollo legacy that still shapes public understanding, the technology that has changed since the 1960s, and the next steps that Artemis II is intended to unlock.
+            </p>
+          </div>
+          <figure className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-[0_0_60px_rgba(56,189,248,0.1)] backdrop-blur-sm lg:mt-2">
+            <img
+              src="/earthrise-apollo-8.jpg"
+              alt="Earthrise photograph taken during Apollo 8"
+              className="aspect-[4/3] w-full object-cover"
+            />
+            <figcaption className="border-t border-white/10 bg-slate-950/80 px-5 py-4 text-sm leading-6 text-slate-300">
+              Apollo 8’s Earthrise remains one of the defining images behind every modern comparison between Apollo and Artemis. Source: 
+              <a
+                href="https://commons.wikimedia.org/wiki/File:AS08-14-2383.jpg"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sky-300 transition hover:text-sky-200"
+              >
+                Wikimedia Commons
+              </a>
+            </figcaption>
+          </figure>
+        </div>
       </Section>
     </>
   );

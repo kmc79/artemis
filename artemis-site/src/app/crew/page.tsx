@@ -4,6 +4,9 @@ const crew = [
   {
     name: "Reid Wiseman",
     role: "Commander",
+    image: "/crew/reid-wiseman.jpg",
+    credit: "NASA via Wikimedia Commons",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Gregory_R._Wiseman,_official_portrait.jpg",
     quote:
       "My role as commander on this mission is simply to take care of my crew, take care of this Orion spacecraft, get us around the Moon, and get us safely back to planet Earth.",
     quoteSource: "NASA Curious Universe",
@@ -16,6 +19,9 @@ const crew = [
   {
     name: "Victor Glover",
     role: "Pilot",
+    image: "/crew/victor-glover.jpg",
+    credit: "NASA via Wikimedia Commons",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Victor_J._Glover_official_portrait.jpg",
     quote:
       "Pushing ourselves to explore is just core to who we are. That’s a part of being a human.",
     quoteSource: "NASA Curious Universe",
@@ -28,6 +34,9 @@ const crew = [
   {
     name: "Christina Koch",
     role: "Mission Specialist",
+    image: "/crew/christina-koch.jpg",
+    credit: "NASA via Wikimedia Commons",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Christina_Koch_official_portrait_in_an_EMU.jpg",
     quote:
       "There are things about our universe we can only learn if we go to certain places. Only those places can tell us those things about the universe.",
     quoteSource: "NASA Curious Universe",
@@ -40,6 +49,9 @@ const crew = [
   {
     name: "Jeremy Hansen",
     role: "Mission Specialist",
+    image: "/crew/jeremy-hansen.jpg",
+    credit: "NASA via Wikimedia Commons",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Jsc2023e0016436_alt2.jpg",
     quote:
       "Artemis is the twin sister of Apollo. That’s intentional. It is to remind us that we’re going to go do great things.",
     quoteSource: "NASA Curious Universe",
@@ -71,13 +83,36 @@ export default function CrewPage() {
 
       {crew.map((member) => (
         <Section key={member.name} title={`${member.name} — ${member.role}`}>
-          {member.paragraphs.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-          <blockquote className="rounded-3xl border border-sky-400/20 bg-sky-400/10 p-6 text-xl leading-8 text-white">
-            “{member.quote}”
-            <footer className="mt-4 text-sm uppercase tracking-[0.28em] text-sky-200">{member.quoteSource}</footer>
-          </blockquote>
+          <div className="grid gap-8 lg:grid-cols-[320px_1fr] lg:items-start">
+            <figure className="overflow-hidden rounded-3xl border border-white/10 bg-white/5">
+              <img
+                src={member.image}
+                alt={`${member.name} portrait`}
+                className="aspect-[4/5] h-full w-full object-cover"
+                loading="lazy"
+              />
+              <figcaption className="border-t border-white/10 px-4 py-3 text-xs uppercase tracking-[0.24em] text-slate-400">
+                <span>Portrait credit: {member.credit}</span>
+                <a
+                  href={member.sourceUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-2 block text-sky-300 transition hover:text-sky-200"
+                >
+                  View source
+                </a>
+              </figcaption>
+            </figure>
+            <div className="space-y-6">
+              {member.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+              <blockquote className="rounded-3xl border border-sky-400/20 bg-sky-400/10 p-6 text-xl leading-8 text-white">
+                “{member.quote}”
+                <footer className="mt-4 text-sm uppercase tracking-[0.28em] text-sky-200">{member.quoteSource}</footer>
+              </blockquote>
+            </div>
+          </div>
         </Section>
       ))}
 

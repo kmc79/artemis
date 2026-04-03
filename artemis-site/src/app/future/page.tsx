@@ -29,12 +29,26 @@ export default function FuturePage() {
       />
 
       <Section title="Why Artemis III sits at the center of the near future">
-        <p>
-          In the public imagination, Artemis III is likely to become the most recognizable early Artemis mission because it is associated with the return of humans to the Moon’s surface. That visibility is understandable. Surface missions concentrate attention in a way flybys and proving flights rarely do. People remember landings. They remember footsteps, images, and moments that seem to resolve a long narrative arc.
-        </p>
-        <p>
-          But Artemis III only makes sense if the path leading to it has been made credible. That is why Artemis II matters so much. It is the mission that tests whether Orion can support a crew in deep space, whether mission control and recovery operations can function coherently in a full crewed lunar profile, and whether the broader Artemis architecture looks dependable enough to support even more complex objectives. Artemis III may get the spotlight, but Artemis II is one of the missions that earns it.
-        </p>
+        <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+          <div className="space-y-6">
+            <p>
+              In the public imagination, Artemis III is likely to become the most recognizable early Artemis mission because it is associated with the return of humans to the Moon’s surface. That visibility is understandable. Surface missions concentrate attention in a way flybys and proving flights rarely do. People remember landings. They remember footsteps, images, and moments that seem to resolve a long narrative arc.
+            </p>
+            <p>
+              But Artemis III only makes sense if the path leading to it has been made credible. That is why Artemis II matters so much. It is the mission that tests whether Orion can support a crew in deep space, whether mission control and recovery operations can function coherently in a full crewed lunar profile, and whether the broader Artemis architecture looks dependable enough to support even more complex objectives. Artemis III may get the spotlight, but Artemis II is one of the missions that earns it.
+            </p>
+          </div>
+          <figure className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-[0_0_50px_rgba(56,189,248,0.08)] backdrop-blur-sm lg:mt-2">
+            <div className="border-b border-white/10 px-6 py-4">
+              <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-300">Campaign roadmap</p>
+            </div>
+            <img
+              src="/artemis-future-roadmap.svg"
+              alt="Diagram showing Artemis II leading into Artemis III and a longer lunar campaign"
+              className="w-full"
+            />
+          </figure>
+        </div>
       </Section>
 
       <Section title="What the next phase of Artemis is meant to unlock">

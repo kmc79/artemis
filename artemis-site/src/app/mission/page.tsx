@@ -45,15 +45,29 @@ export default function MissionPage() {
 
       <Section title="Mission overview">
         <StatGrid items={missionStats} />
-        <p>
-          NASA describes Artemis II as an approximately ten-day mission built around a lunar flyby. The spacecraft stack begins with the Space Launch System, the heavy-lift rocket designed to send Orion and its crew beyond low Earth orbit in a single launch. Once in space, Orion is planned to carry four astronauts through an early phase of Earth-orbit operations before heading onto a translunar trajectory that will take the spacecraft around the far side of the Moon and back to Earth on a free-return path.
-        </p>
-        <p>
-          That broad outline is easy enough to summarize, but the deeper purpose of the mission lies in what it is trying to prove. Artemis II is NASA’s first opportunity to test Orion with a crew in the environment for which it was built. Life support, power, communications, navigation, manual handling, crew procedures, and recovery planning all need to be exercised under real mission conditions. The spacecraft must not only survive the trip; it must support human beings through it in a way that builds confidence for future missions that will go further in ambition and consequence.
-        </p>
-        <p>
-          This is why Artemis II should be understood as a proving flight rather than a preliminary spectacle. It is the bridge between uncrewed demonstration and operational lunar exploration. If it succeeds, NASA and its partners gain more than a memorable mission. They gain verified experience, refined procedures, and the kind of institutional confidence that cannot be manufactured through simulation alone.
-        </p>
+        <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+          <div className="space-y-6">
+            <p>
+              NASA describes Artemis II as an approximately ten-day mission built around a lunar flyby. The spacecraft stack begins with the Space Launch System, the heavy-lift rocket designed to send Orion and its crew beyond low Earth orbit in a single launch. Once in space, Orion is planned to carry four astronauts through an early phase of Earth-orbit operations before heading onto a translunar trajectory that will take the spacecraft around the far side of the Moon and back to Earth on a free-return path.
+            </p>
+            <p>
+              That broad outline is easy enough to summarize, but the deeper purpose of the mission lies in what it is trying to prove. Artemis II is NASA’s first opportunity to test Orion with a crew in the environment for which it was built. Life support, power, communications, navigation, manual handling, crew procedures, and recovery planning all need to be exercised under real mission conditions. The spacecraft must not only survive the trip; it must support human beings through it in a way that builds confidence for future missions that will go further in ambition and consequence.
+            </p>
+            <p>
+              This is why Artemis II should be understood as a proving flight rather than a preliminary spectacle. It is the bridge between uncrewed demonstration and operational lunar exploration. If it succeeds, NASA and its partners gain more than a memorable mission. They gain verified experience, refined procedures, and the kind of institutional confidence that cannot be manufactured through simulation alone.
+            </p>
+          </div>
+          <figure className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-[0_0_60px_rgba(56,189,248,0.08)] backdrop-blur-sm">
+            <div className="border-b border-white/10 px-6 py-4">
+              <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-300">Mission phases</p>
+            </div>
+            <img
+              src="/mission-phase-diagram.svg"
+              alt="Diagram showing the main phases of Artemis II from launch through lunar flyby and splashdown"
+              className="w-full"
+            />
+          </figure>
+        </div>
       </Section>
 
       <Section title="What Artemis II is meant to test">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { SiteShell } from "@/components/site-shell";
@@ -28,6 +29,12 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <body>
         <SiteShell>{children}</SiteShell>
+        <Script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "7d2aa7f327844a8990e8564e25c12570"}'
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

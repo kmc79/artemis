@@ -1,4 +1,21 @@
+import type { Metadata } from "next";
 import { PageHero, Section } from "@/components/site-shell";
+
+export const metadata: Metadata = {
+  title: "Artemis II and Apollo 8 | Why Apollo Still Frames the Mission",
+  description:
+    "Learn why Apollo 8 is the clearest historical comparison for Artemis II, how the missions differ, and why the Apollo legacy still shapes how people understand Artemis.",
+  alternates: {
+    canonical: "/apollo-legacy",
+  },
+  openGraph: {
+    title: "Artemis II and Apollo 8 | Why Apollo Still Frames the Mission",
+    description:
+      "Why Apollo 8 is the clearest historical comparison for Artemis II and what the Apollo legacy still explains today.",
+    url: "https://artemis.endless-summer.online/apollo-legacy",
+    type: "article",
+  },
+};
 
 const apolloLessons = [
   {
@@ -33,7 +50,7 @@ export default function ApolloLegacyPage() {
       <PageHero
         eyebrow="Apollo Legacy"
         title="Apollo 8 is the clearest predecessor to Artemis II, but the comparison matters only if it is used carefully"
-        intro="Any serious explanation of Artemis II eventually runs into Apollo, and especially Apollo 8. That 1968 mission was the first time human beings left Earth orbit, traveled to the Moon, and returned safely home. Artemis II is not a reenactment of that flight, but it occupies a similar position inside its own program: a crewed lunar proving mission whose deeper purpose is to make later missions more credible. The legacy matters because it helps explain why a mission without a landing can still become one of the decisive flights of an era."
+        intro="Any serious explanation of Artemis II eventually runs into Apollo, and especially Apollo 8. That 1968 mission was the first time human beings left Earth orbit, traveled to the Moon, and returned safely home. Artemis II is not a reenactment of that flight, but it occupies a similar position inside its own program: a crewed lunar proving mission whose deeper purpose is to make later missions more credible. For readers searching for the Artemis II Apollo 8 comparison, this is the historical lens that explains it best. The legacy matters because it helps explain why a mission without a landing can still become one of the decisive flights of an era."
       />
 
       <Section title="Why Apollo still frames how people see Artemis">

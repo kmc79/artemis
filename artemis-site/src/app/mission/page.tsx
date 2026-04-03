@@ -1,5 +1,22 @@
+import type { Metadata } from "next";
 import { PageHero, Section, StatGrid } from "@/components/site-shell";
 import { missionStats } from "@/content/site";
+
+export const metadata: Metadata = {
+  title: "Artemis II Mission Profile | Timeline, Flight Path, and What NASA Will Test",
+  description:
+    "Explore the Artemis II mission profile, including the timeline, flight path, lunar flyby, Orion testing goals, and why this mission matters before Artemis III.",
+  alternates: {
+    canonical: "/mission",
+  },
+  openGraph: {
+    title: "Artemis II Mission Profile | Timeline, Flight Path, and What NASA Will Test",
+    description:
+      "Explore the Artemis II mission profile, timeline, flight path, lunar flyby, and the mission's test objectives.",
+    url: "https://artemis.endless-summer.online/mission",
+    type: "article",
+  },
+};
 
 const missionTimeline = [
   {
@@ -40,7 +57,7 @@ export default function MissionPage() {
       <PageHero
         eyebrow="Artemis II Mission"
         title="An approximately ten-day proving flight built to test Orion, validate operations, and carry astronauts around the Moon"
-        intro="Artemis II is the mission in which the Artemis program stops being a matter of hardware demonstrations alone and becomes a human deep-space flight campaign. Its purpose is not simply to send a crew on a dramatic journey, but to verify that the spacecraft, launch vehicle, procedures, communications systems, and recovery operations required for later lunar missions can function together with astronauts on board. The result is a mission that is as much about disciplined testing as it is about symbolism."
+        intro="Artemis II is the mission in which the Artemis program stops being a matter of hardware demonstrations alone and becomes a human deep-space flight campaign. Its purpose is not simply to send a crew on a dramatic journey, but to verify that the spacecraft, launch vehicle, procedures, communications systems, and recovery operations required for later lunar missions can function together with astronauts on board. If someone is searching for the Artemis II mission profile, timeline, or flight path, this is the page that explains it. The result is a mission that is as much about disciplined testing as it is about symbolism."
       />
 
       <Section title="Mission overview">

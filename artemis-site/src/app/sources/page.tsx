@@ -1,6 +1,23 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero, Section } from "@/components/site-shell";
 import { sourceGroups } from "@/content/site";
+
+export const metadata: Metadata = {
+  title: "Artemis II Sources | NASA, CSA, Apollo, and Historical References",
+  description:
+    "Browse the primary NASA, CSA, and historical sources behind this Artemis II site, including mission pages, crew materials, and Apollo references.",
+  alternates: {
+    canonical: "/sources",
+  },
+  openGraph: {
+    title: "Artemis II Sources | NASA, CSA, Apollo, and Historical References",
+    description:
+      "Browse the primary NASA, CSA, and historical sources behind this Artemis II site.",
+    url: "https://artemis.endless-summer.online/sources",
+    type: "article",
+  },
+};
 
 export default function SourcesPage() {
   return (

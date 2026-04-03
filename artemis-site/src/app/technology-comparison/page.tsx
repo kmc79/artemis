@@ -1,5 +1,22 @@
+import type { Metadata } from "next";
 import { PageHero, Section } from "@/components/site-shell";
 import { technologyComparison } from "@/content/site";
+
+export const metadata: Metadata = {
+  title: "Artemis II vs Apollo Technology | Orion, Computing, Interfaces, and Operations",
+  description:
+    "Compare Artemis II and Apollo technology across computing, spacecraft design, cockpit interfaces, mission operations, and program structure.",
+  alternates: {
+    canonical: "/technology-comparison",
+  },
+  openGraph: {
+    title: "Artemis II vs Apollo Technology | Orion, Computing, Interfaces, and Operations",
+    description:
+      "Compare Artemis II and Apollo technology across computing, spacecraft design, interfaces, and mission operations.",
+    url: "https://artemis.endless-summer.online/technology-comparison",
+    type: "article",
+  },
+};
 
 export default function TechnologyComparisonPage() {
   return (
@@ -7,7 +24,7 @@ export default function TechnologyComparisonPage() {
       <PageHero
         eyebrow="Technology Comparison"
         title="Artemis II uses modern systems, but its real significance comes from how differently the whole mission is organized"
-        intro="Comparisons between Artemis and Apollo often start with hardware, which makes sense. Both programs send crews toward the Moon, and both rely on capsules, mission control, and carefully staged flight profiles. But the more revealing comparison is not just which spacecraft has newer electronics. It is how the tools, interfaces, software, operational methods, and institutional structure of lunar flight have changed across more than half a century. Artemis II is not simply Apollo with upgraded parts. It reflects a different era of engineering, safety expectations, and international cooperation."
+        intro="Comparisons between Artemis and Apollo often start with hardware, which makes sense. Both programs send crews toward the Moon, and both rely on capsules, mission control, and carefully staged flight profiles. But the more revealing comparison is not just which spacecraft has newer electronics. It is how the tools, interfaces, software, operational methods, and institutional structure of lunar flight have changed across more than half a century. Artemis II is not simply Apollo with upgraded parts. It reflects a different era of engineering, safety expectations, and international cooperation. If people are searching for Apollo vs Artemis technology or Orion vs Apollo spacecraft differences, this page is meant to answer that cleanly."
       />
 
       <Section title="Why the technology comparison matters">

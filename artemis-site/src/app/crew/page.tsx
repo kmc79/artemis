@@ -1,4 +1,21 @@
+import type { Metadata } from "next";
 import { PageHero, Section } from "@/components/site-shell";
+
+export const metadata: Metadata = {
+  title: "Artemis II Crew | Reid Wiseman, Victor Glover, Christina Koch, and Jeremy Hansen",
+  description:
+    "Meet the Artemis II crew: Reid Wiseman, Victor Glover, Christina Koch, and Jeremy Hansen. Learn why this crew matters for NASA's first crewed Artemis mission.",
+  alternates: {
+    canonical: "/crew",
+  },
+  openGraph: {
+    title: "Artemis II Crew | Reid Wiseman, Victor Glover, Christina Koch, and Jeremy Hansen",
+    description:
+      "Meet the Artemis II crew and why each astronaut matters for NASA's first crewed Artemis mission.",
+    url: "https://artemis.endless-summer.online/crew",
+    type: "article",
+  },
+};
 
 const crew = [
   {
@@ -69,7 +86,7 @@ export default function CrewPage() {
       <PageHero
         eyebrow="The Crew"
         title="Four astronauts carrying experience, symbolism, and operational responsibility into deep space"
-        intro="The Artemis II crew has been assembled not only for what it represents, but for what it must accomplish. This is a test mission, and every member of the crew is there because the flight demands technical judgment, disciplined teamwork, and the ability to perform under conditions that are both historic and exacting. At the same time, the crew tells a broader story about who is seen in deep-space exploration now, and how the meaning of a lunar mission has changed since the Apollo era."
+        intro="The Artemis II crew has been assembled not only for what it represents, but for what it must accomplish. This is a test mission, and every member of the crew is there because the flight demands technical judgment, disciplined teamwork, and the ability to perform under conditions that are both historic and exacting. At the same time, the Artemis 2 crew tells a broader story about who is seen in deep-space exploration now, and how the meaning of a lunar mission has changed since the Apollo era."
       />
 
       <Section title="A crew built for a proving flight">

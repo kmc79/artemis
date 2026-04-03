@@ -1,6 +1,29 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { CardGrid, GlassCard, PageHero, Section, StatGrid } from "@/components/site-shell";
 import { homeHighlights, missionStats, siteNavigation } from "@/content/site";
+
+export const metadata: Metadata = {
+  title: "Artemis II Guide | Crew, Mission, Apollo 8 Comparison, and Future Missions",
+  description:
+    "A readable guide to Artemis II covering the crew, mission profile, Apollo 8 comparison, Artemis technology, and what Artemis II means for Artemis III and future lunar missions.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Artemis II Guide | Crew, Mission, Apollo 8 Comparison, and Future Missions",
+    description:
+      "A readable guide to Artemis II covering the crew, mission profile, Apollo 8 comparison, Artemis technology, and what Artemis II means for Artemis III and future lunar missions.",
+    url: "https://artemis.endless-summer.online/",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Artemis II Guide | Crew, Mission, Apollo 8 Comparison, and Future Missions",
+    description:
+      "A readable guide to Artemis II covering the crew, mission profile, Apollo 8 comparison, Artemis technology, and future missions.",
+  },
+};
 
 export default function HomePage() {
   return (
@@ -10,7 +33,7 @@ export default function HomePage() {
           <PageHero
             eyebrow="Artemis II"
             title="A return to crewed lunar flight, and the beginning of a new era beyond Earth orbit"
-            intro="Artemis II stands at a rare hinge-point in spaceflight history. It is not only NASA’s first crewed Artemis mission, but also the first time since the Apollo era that astronauts will leave the near-Earth environment and head out on a lunar trajectory. As a mission, it is both a test and a statement: a demonstration that the systems built for a new generation of deep-space exploration are ready to carry human beings around the Moon and safely home again."
+            intro="Artemis II stands at a rare hinge-point in spaceflight history. Artemis 2 is not only NASA’s first crewed Artemis mission, but also the first time since the Apollo era that astronauts will leave the near-Earth environment and head out on a lunar trajectory. As a mission, it is both a test and a statement: a demonstration that the systems built for a new generation of deep-space exploration are ready to carry human beings around the Moon and safely home again."
           />
         </div>
         <aside className="relative self-center lg:pt-10">
@@ -39,7 +62,7 @@ export default function HomePage() {
 
       <Section title="Why Artemis II matters">
         <p>
-          Some missions are remembered because they achieve a visible first. Others matter because they make later triumphs possible. Artemis II belongs to the second category, even as it carries historic firsts of its own. It is designed as a proving flight for the spacecraft, launch system, crew procedures, and mission operations that NASA and its international partners intend to rely on for future expeditions deeper into cislunar space and, eventually, onto the lunar surface. Without a mission like this, later ambitions would remain theoretical.
+          Some missions are remembered because they achieve a visible first. Others matter because they make later triumphs possible. Artemis II belongs to the second category, even as it carries historic firsts of its own. It is designed as a proving flight for the spacecraft, launch system, crew procedures, and mission operations that NASA and its international partners intend to rely on for future expeditions deeper into cislunar space and, eventually, onto the lunar surface. Without a mission like this, later ambitions would remain theoretical. For anyone searching for what Artemis II is, why Artemis 2 matters, or how the mission fits into NASA’s lunar program, this is the core answer.
         </p>
         <p>
           The significance of Artemis II also comes from timing. For more than half a century, no crewed mission has ventured out toward the Moon. Human spaceflight has remained extraordinary, but it has also been geographically bounded, concentrated in low Earth orbit through the Space Shuttle era and then through decades of work aboard the International Space Station. Artemis II marks a widening of that horizon. It asks whether the technologies, training, and operational discipline of the present day are ready for the harsher, less forgiving realm beyond Earth orbit.

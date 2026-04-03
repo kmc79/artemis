@@ -1,5 +1,22 @@
+import type { Metadata } from "next";
 import { PageHero, Section } from "@/components/site-shell";
 import { futureMilestones } from "@/content/site";
+
+export const metadata: Metadata = {
+  title: "What Comes After Artemis II? | Artemis III, Lunar Return, and Future Missions",
+  description:
+    "See what Artemis II is meant to unlock for Artemis III, future lunar missions, and the longer-term direction of NASA's Artemis program.",
+  alternates: {
+    canonical: "/future",
+  },
+  openGraph: {
+    title: "What Comes After Artemis II? | Artemis III, Lunar Return, and Future Missions",
+    description:
+      "What Artemis II is meant to unlock for Artemis III, future lunar missions, and the longer-term Artemis campaign.",
+    url: "https://artemis.endless-summer.online/future",
+    type: "article",
+  },
+};
 
 const futureQuestions = [
   {
@@ -25,7 +42,7 @@ export default function FuturePage() {
       <PageHero
         eyebrow="Future / Artemis III"
         title="Artemis II matters because it is supposed to make the missions after it operationally believable"
-        intro="The future section of an Artemis II site has to do more than gesture vaguely toward ‘what comes next.’ It needs to explain why this mission exists inside a larger sequence and why Artemis III, in particular, carries such weight. Artemis II is a proving flight. Artemis III is the mission expected to attempt the return of astronauts to the lunar surface. That relationship gives the current mission much of its meaning. Artemis II is not important despite being preparatory. It is important because future ambitions depend on whether this step works."
+        intro="The future section of an Artemis II site has to do more than gesture vaguely toward ‘what comes next.’ It needs to explain why this mission exists inside a larger sequence and why Artemis III, in particular, carries such weight. Artemis II is a proving flight. Artemis III is the mission expected to attempt the return of astronauts to the lunar surface. That relationship gives the current mission much of its meaning. If readers are searching for what comes after Artemis II or how Artemis 2 connects to Artemis III, this is the page that addresses it directly. Artemis II is not important despite being preparatory. It is important because future ambitions depend on whether this step works."
       />
 
       <Section title="Why Artemis III sits at the center of the near future">

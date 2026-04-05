@@ -1,34 +1,12 @@
-import Link from "next/link";
 import { ReactNode } from "react";
-import { siteNavigation } from "@/content/site";
+import { SiteHeader } from "@/components/site-header";
 
 export function SiteShell({ children }: { children: ReactNode }) {
   return (
     <div className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top,_rgba(92,140,255,0.22),_transparent_30%),linear-gradient(180deg,_#050816_0%,_#08101f_45%,_#03060f_100%)] text-slate-100">
       <div className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(255,255,255,0.7)_0.7px,transparent_0.7px)] [background-size:30px_30px]" />
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(8,16,31,0.2)_0%,rgba(8,16,31,0.75)_100%)]" />
-      <header className="sticky top-0 z-20 border-b border-white/10 bg-slate-950/75 backdrop-blur-xl">
-        <div className="mx-auto max-w-7xl px-6 py-4 lg:px-10">
-          <div className="flex flex-col gap-4 md:gap-3">
-            <div className="flex items-center justify-between gap-4">
-              <Link href="/" className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-200">
-                Artemis II
-              </Link>
-            </div>
-            <nav className="flex flex-wrap gap-2 text-sm text-slate-200 md:gap-3">
-              {siteNavigation.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="rounded-full border border-white/10 bg-white/5 px-3 py-2 leading-none transition hover:border-sky-300/40 hover:bg-sky-400/10 hover:text-white"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
-        </div>
-      </header>
+      <SiteHeader />
       <main className="relative z-10">{children}</main>
       <footer className="relative z-10 border-t border-white/10 bg-slate-950/70">
         <div className="mx-auto max-w-7xl px-6 py-8 text-sm text-slate-300 lg:px-10">

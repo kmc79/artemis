@@ -14,8 +14,8 @@
 - [x] Technology Comparison page built
 - [x] Future / Artemis III page built
 - [x] Sources page built
-- [ ] Shared content/data expanded for all pages
-- [ ] Internal navigation verified across all routes
+- [x] Shared content/data expanded for all pages
+- [x] Internal navigation verified across all routes
 - [ ] Local preview run and route check completed
 - [ ] Content QA and factual wording review completed
 - [ ] Visual polish pass completed
@@ -27,4 +27,4 @@
 Refer to this file before moving to the next task. Complete the next unchecked item unless blocked.
 
 ## Current next task
-- Expand shared content/data for all pages
+- Run local preview and complete a route check

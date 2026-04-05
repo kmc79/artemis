@@ -1,5 +1,6 @@
 export const siteNavigation = [
   { href: "/", label: "Home" },
+  { href: "/live-tracker", label: "Live Tracker" },
   { href: "/crew", label: "Crew" },
   { href: "/mission", label: "Mission" },
   { href: "/apollo-legacy", label: "Apollo Legacy" },

@@ -6,6 +6,7 @@ const baseUrl = "https://artemis.endless-summer.online";
 
 const routes = [
   "",
+  "/live-tracker",
   "/crew",
   "/mission",
   "/apollo-legacy",

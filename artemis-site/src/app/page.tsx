@@ -74,6 +74,25 @@ export default function HomePage() {
 
       <Section title="Mission at a glance">
         <StatGrid items={missionStats} />
+        <div className="rounded-[2rem] border border-sky-300/20 bg-sky-400/10 p-6 shadow-[0_0_60px_rgba(56,189,248,0.12)] backdrop-blur-sm">
+          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-300">Live mission tracker</p>
+          <div className="mt-4 grid gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+            <div className="space-y-4 text-base leading-7 text-slate-200">
+              <h3 className="text-2xl font-semibold text-white">Follow Artemis II’s current position around the Moon</h3>
+              <p>
+                The site now includes a dedicated Artemis II live tracker showing the current mission phase, Orion’s distance from Earth, distance from the Moon, and live mission status updates while the flight is under way. If you are searching for an Artemis II tracker, a way to see where Orion is now, or a readable mission status page during the lunar flyby, start there.
+              </p>
+            </div>
+            <div>
+              <Link
+                href="/live-tracker"
+                className="inline-flex rounded-2xl border border-sky-300/30 bg-slate-950/60 px-5 py-4 text-base font-medium text-white transition hover:border-sky-300/50 hover:bg-sky-300/10 hover:text-sky-100"
+              >
+                Open the Live Tracker
+              </Link>
+            </div>
+          </div>
+        </div>
         <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="space-y-6">
             <p>

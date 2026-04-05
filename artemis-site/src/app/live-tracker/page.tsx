@@ -115,9 +115,8 @@ function findCurrentPhase(phases: LiveMissionPhase[], elapsedDays: number) {
   }
 
   const currentIndex = phases.findIndex((phase) => phase.name === current.name);
-  const next = currentIndex >= 0 ? phases[currentIndex + 1] : undefined;
 
-  return { current, next, currentIndex };
+  return { current, currentIndex };
 }
 
 export default async function LiveTrackerPage() {
@@ -131,7 +130,7 @@ export default async function LiveTrackerPage() {
 
   const data = (await response.json()) as LiveMissionResponse;
   const elapsedDays = missionElapsedDays(data.mission.launch_utc);
-  const { current, next, currentIndex } = findCurrentPhase(data.mission.phases, elapsedDays);
+  const { current, currentIndex } = findCurrentPhase(data.mission.phases, elapsedDays);
   const missionProgress = Math.min(
     100,
     Math.max(0, (elapsedDays / 9.074) * 100),
@@ -272,17 +271,7 @@ export default async function LiveTrackerPage() {
         </div>
       </Section>
 
-      <Section title="What this section is showing">
-        <p>
-          This page is built to answer a live mission question rather than a historical one. The rest of the site explains why Artemis II matters, who is on board, and how the mission compares with Apollo-era lunar flight. This section is different. It is designed to show the moving state of the mission while the spacecraft is actually in flight around the Moon and back.
-        </p>
-        <p>
-          The tracker above shows the current mission phase, the spacecraft’s distance from Earth and from the Moon, the current flight speed, and recent update timing. That makes it possible to see the mission as a journey in progress rather than only as a planned profile. During a mission like Artemis II, that change in perspective matters. The mission stops being purely explanatory and becomes something people can follow as it unfolds.
-        </p>
-        <p>
-          For official mission context and NASA’s own public-facing live tracking materials, use the links below. This site’s live section is intended to make the mission state readable at a glance while still pointing back to the primary public sources around the flight.
-        </p>
-
+      <Section title="Sources">
         <div className="grid gap-4 md:grid-cols-2">
           <a
             href={NASA_TRACKER_URL}

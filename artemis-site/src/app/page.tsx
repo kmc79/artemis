@@ -115,17 +115,20 @@ export default function HomePage() {
             </div>
             <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[0_0_40px_rgba(167,139,250,0.08)] backdrop-blur-sm">
               <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-300">Explore the site</p>
-              <div className="mt-5 space-y-4">
-                {siteNavigation.filter((item) => item.href !== "/").map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="block rounded-2xl border border-white/10 px-4 py-4 text-base text-slate-200 transition hover:border-sky-400/40 hover:bg-sky-400/10 hover:text-white"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
+              <ul className="mt-5 space-y-4">
+                {siteNavigation
+                  .filter((item) => item.href !== "/")
+                  .map((item) => (
+                    <li key={item.href}>
+                      <Link
+                        href={item.href}
+                        className="block rounded-2xl border border-white/10 bg-slate-950/40 px-4 py-4 text-base text-slate-200 transition hover:border-sky-400/40 hover:bg-sky-400/10 hover:text-white"
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+              </ul>
             </div>
           </div>
         </div>
